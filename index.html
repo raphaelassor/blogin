@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Blogin</title>
+</head>
+
+<body>
+    <div class="main-screen" onclick="exitOpacityMode()"></div>
+
+    <!-- MODAL -->
+    <div class="modal" >
+        
+            <h2>Join us to read more </h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum labore, harum ea consequatur, pariatur quisquam repellat, maxime voluptatem dolor eligendi fugiat. Est debitis labore saepe placeat, quidem enim facere consectetur?</p>
+            <form>
+                <input type="email" placeholder="johnsmith@example.com">
+                <button class="btn btn-submit">Continue Reading </button>
+            </form>
+            <button class="btn btn-close" onclick="toggleModal()">Close</button>
+    </div>
+    <!-- END MODAL  -->
+
+    <header class="main-header">
+        <div class="main-header-content container flex space-between align-center">
+            <div class="logo">Blogin</div>
+            <ul class="main-nav flex align-center clean-list">
+                <li onclick="toggleDropdown()" class="dropdown-parent">
+                    <a href="#">Journal</a>
+                        <ul class="dropdown-list clean-list">
+                            <li > <a href=""> October 2016</a></li>
+                            <li> <a href=""> October 2016</a></li>
+                            <li> <a href=""> October 2016</a></li>
+                            <li> <a href=""> October 2016</a></li>
+                        </ul>
+                </li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Cotact</a></li>
+            </ul>
+            <button onclick="toggleMenu()"class="btn-menu">
+            <!-- <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg> -->
+        =</button>
+        </div>
+    </header>
+    <main class="main-content flex container ">
+        <div class="card flex">
+            <img src="/img/1.png" alt="" class="card-img">
+            <div class="card-content">
+                <h2 class="card-title">This is the title of the card</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam enim velit fuga repellendus.
+                        </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, harum voluptatibus </p>
+                    <button class="btn-round" onclick="toggleModal()">Cointinue Reading</button>
+            </div>
+        </div>
+        <div class="card flex">
+            <img src="/img/2.png" alt="" class="card-img">
+            <div class="card-content">
+                <h2 class="card-title">This is the title of the card</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam enim velit fuga repellendus.
+                        </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, harum voluptatibus </p>
+                    <button class="btn-round" onclick="toggleModal()">Cointinue Reading</button>
+            </div>
+        </div>
+        <div class="card flex">
+            <img src="/img/3.png" alt="" class="card-img">
+            <div class="card-content">
+                <h2 class="card-title">This is the title of the card</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam enim velit fuga repellendus.
+                        </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, harum voluptatibus </p>
+                    <button class="btn-round" onclick="toggleModal()">Cointinue Reading</button>
+            </div>
+        </div>
+        
+        <div class=" nav-pages flex space-between">
+            <a href="#">PREVIOUS</a>
+            <a href="#">NEXT</a>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container container flex column align-center ">
+            <div class="logo">Blogin</div>
+            <small class="copyrights">2014-all rights revserved, find more details</small>
+            <ul class="social-icons flex  clean-list">
+                <li><a class=" fa facebook" href=""></a></li>
+                <li><a class="fa twitter" href=""></a></li>
+                <li><a class="fa behance" href=""></a></li>
+                <li><a class=" fa instagram" href=""></a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+<script>
+   function  exitOpacityMode(){
+        if(document.body.classList.contains('menu-open')) toggleMenu();
+        else if(document.body.classList.contains('modal-open')) toggleModal();
+    }
+function toggleMenu() {
+            document.body.classList.toggle('menu-open')
+        }
+function toggleModal(){
+    document.body.classList.toggle('modal-open')
+}
+function toggleDropdown(){
+    if(window.innerWidth>740) return;
+    document.querySelector('.dropdown-parent').classList.toggle('dropdown-expand');
+}
+
+</script>
+
+
+</body>
+
+</html>
